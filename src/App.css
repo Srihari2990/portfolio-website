@@ -1,38 +1,191 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
 .App {
-  text-align: center;
+  padding-top: 80px; /* Prevent content from being hidden behind the fixed navbar */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  padding: 60px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure particles stay behind content */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar, .home-section, .about-section, .projects-section, .contact-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark/Light Mode Variables */
+:root {
+  /* Dark mode colors (default) */
+  --navbar-background: #1a1a1a;
+  --background-color: #0d0d0d;
+  --footer-background: #1a1a1a;
+  --text-color: #ffffff;
+  --button-background: #ff6f61;
+  --button-text-color: white;
+  --link-color: #61dafb;
+  --social-icon-hover-color: #ff6f61;
+}
+
+body.light-mode {
+  /* Light mode colors */
+  --navbar-background: #ffffff;
+  --background-color: #f9f9f9;
+  --footer-background: #f1f1f1;
+  --text-color: #000000;
+  --button-background: #007bff;
+  --button-text-color: white;
+  --link-color: #007bff;
+  --social-icon-hover-color: #007bff;
+}
+
+/* Navbar Styles */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  background-color: var(--navbar-background);
+  color: var(--text-color);
+  z-index: 100;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links .nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: var(--link-color);
+}
+
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.btn.resume-btn {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.resume-btn:hover {
+  background-color: var(--social-icon-hover-color);
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--footer-background);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+  z-index: 1;
+}
+
+footer .footer-left {
+  font-size: 16px;
+}
+
+footer .footer-center {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-center svg {
+  margin-left: 5px;
+}
+
+footer .footer-right {
+  display: flex;
+  gap: 10px;
+}
+
+footer .footer-right a {
+  font-size: 24px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+footer .footer-right a:hover {
+  color: var(--social-icon-hover-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  footer .footer-left,
+  footer .footer-center,
+  footer .footer-right {
+    margin-bottom: 10px;
   }
+}
+
+/* Particle JS Z-Index fix */
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }

@@ -1,0 +1,67 @@
+.footer {
+  background-color: #1b1b1b;
+  color: #ffffff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-family: 'Verdana', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1;
+}
+
+.footer-left p,
+.footer-middle p {
+  margin: 0;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-icon {
+  margin-left: 10px;
+  color: #61dafb;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.social-icon {
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.github {
+  color: white;
+}
+
+.linkedin {
+  color: #0e76a8;
+}
+
+.instagram {
+  color: #e1306c;
+}
