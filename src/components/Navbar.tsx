@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
         {/* Right side */}
         <div className="navbar-right">
           <a 
-            href="/Srihari_Developer.pdf" 
+            href="/Srihari_Developer5-2.pdf" 
             className="btn resume-btn" 
             target="_blank" 
             rel="noopener noreferrer">

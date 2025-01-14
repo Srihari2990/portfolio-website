@@ -17,11 +17,11 @@ const Home: React.FC = () => {
           </h3>
           <h2>Srihari</h2>
           <p className="subtitle">
-            Software Developer | Java | MERN Stack | AWS Certified Developer Associate |
+            Software Engineer | Java | MERN Stack | AWS Certified Developer Associate | Spring Boot |
           </p>
           <h4>GitHub Developer Program Member</h4>
           <div className="social-icons">
-            <a href="https://www.linkedin.com/in/srihari-gutthi-009372310/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/sri-hari-g-009372310/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="social-icon linkedin" />
             </a>
             <a href="https://github.com/Srihari2990" target="_blank" rel="noopener noreferrer">
